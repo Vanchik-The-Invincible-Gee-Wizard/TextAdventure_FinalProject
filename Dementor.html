@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+      <link rel = "stylesheet" href = "textStyle.css">
+    <style>
+    #italics{
+      font-style: italic;
+    }
+    </style>
+      <link rel = "stylesheet" href = "textStyle.css">
+    <script>
+    function hide()
+    {
+      document.getElementById('button2').style.visibility = "hidden";
+    }
+    function checkAnswer()
+    {
+      var x = document.getElementById("name").value;
+      if (x == "Expelliarmus")
+      {
+        document.getElementById("answer").innerHTML = "Great job! You cast the correct spell and defeat the dementor. You reach for the book and this time, you are able to grab it and open it. <br>The pages are covered in hardwriting; it's a diary. Your cat brushes up against your leg and suddenly you are apparated again and find yourself standing just outside the main entrance <br>diary in hand.";
+        document.getElementById('button2').style.visibility = "visible";
+      }
+      else if (x == "expelliarmus")
+      {
+        document.getElementById("answer").innerHTML = "Great job! You cast the correct spell and defeat the dementor. You reach for the book and this time, you are able to grab it and open it. <br>The pages are covered in hardwriting; it's a diary. Your cat brushes up against your leg and suddenly you are apparated again and find yourself standing just outside the main entrance <br>diary in hand.";
+        document.getElementById('button2').style.visibility = "visible";
+      }
+      else
+      {
+        window.location.href = "YouDied.html";
+      }
+    }
+    function next()
+    {
+      window.location.href = "Conclusion.html";
+    }
+    </script>
+  </head>
+
+    <body onload = "hide()">
+      <ul id = "top">
+        <li class = "items"> Your Hogwarts School of Witchcraft and Wizardry Adventure </li> <hr>
+      </ul>
+      <ul id = "side">
+      <li id = "sideBar"><a href = "TextAdventure.html"> Home </a></li>
+      <li id = "sideBar"><a href = "Spells.html"> Spells </a></li>
+      </ul>
+      <h1> You Forge Ahead</h1>
+      <p> When your cat finally stops, you see that you are in a clearing. In the center, you see a glowing object on the tree stump. </p>
+      <p> You walk closer and see that it is a book with a leather cover. You reach for it, feeling drawn towards it for some reason, but <br>
+        right as you are about to touch it, a dark hooded creature floats out from the trees. It's a dementor. You whip your wand out once again.</p>
+      <p> Which spell do you cast? </p>
+      <p = "italics"> Click on "Spells" in the sidebar to access the Spellbook </p>
+      <input type = "text" id = "name" value = "Type in Spell">
+      <input type = "button" id = "button1" onclick = "checkAnswer()" value = "GO">
+      <p id = "answer"> </p>
+      <input type = "button" id = "button2" value = "Next" onclick = "next()">
+    </body>
+</html>

@@ -1,0 +1,70 @@
+<html>
+  <head>
+      <link rel = "stylesheet" href = "textStyle.css">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <script>
+      function elseIF()
+      {
+        var y = window.localStorage.getItem('userName');
+        document.getElementById("name").innerHTML = y;
+        var x = document.getElementById("words").value;
+        x = parseInt(x);
+        if (x == 1)
+        {
+          document.getElementById("house").innerHTML = "You have been sorted into Ravenclaw!";
+        }
+        else if (x == 2)
+        {
+          document.getElementById("house").innerHTML = "You have been sorted into Gryffindor!";
+        }
+        else if (x == 3)
+        {
+          document.getElementById("house").innerHTML = "You have been sorted into Slytherin!";
+        }
+        else if (x == 4)
+        {
+          document.getElementById("house").innerHTML = "You have been sorted into Hufflepuff!";
+        }
+      }
+      function next()
+      {
+        window.location.href = "Riddle.html";
+      }
+    </script>
+  </head>
+
+    <body>
+      <ul id = "top">
+        <li class = "items"> Your Hogwarts School of Witchcraft and Wizardry Adventure </li> <hr>
+      </ul>
+      <ul id = "side">
+      <li id = "sideBar"><a href = "TextAdventure.html"> Home </a></li>
+      <li id = "sideBar"><a href = "Spells.html"> Spells </a></li>
+      </ul>
+    <table>
+      <tr>
+        <td> <input type = "button" value = "Wise and Witty (1)">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</td>
+        <td> <input type = "button" value = "Loyal and Brave (2)"> &nbsp &nbsp &nbsp &nbsp &nbsp</td>
+        <td> <input type = "button" value = "Ambitious and Resourceful (3)"> &nbsp &nbsp &nbsp</td>
+        <td> <input type = "button" value = "Honest and Hardworking (4)"></td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td> <img src = "ravenclaw.jpg" height = "100px" width = "100px">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</td>
+        <td> <img src = "gryffindor.jpg" height = "100px" width = "100px">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</td>
+        <td> <img src = "slytherin.jpg" height = "100px" width = "100px">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</td>
+        <td> <img src = "huff.jpg" height = "100px" width = "100px">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</td>
+      </tr>
+    </table>
+    <p> Enter 1, 2, 3, or 4 For Which Two Words Best Describe You.</p>
+    <input type = "text" id = "words">
+    <input type = "button" id = "button1" value = "OK" onclick = "elseIF()">
+    <p id = "name"></p>
+    <p id = "house"> </p>
+    <input type = "button" id = "button2" value = "Continue" onclick = "next()">
+    </body>
+</html>

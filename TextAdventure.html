@@ -1,0 +1,58 @@
+<html>
+  <head>
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+      <title>TextAdventure.html</title>
+      <link rel = "stylesheet" href = "textStyle.css">
+    <script>
+      function hide()
+      {
+        document.getElementById("Intro").style.visibility = "hidden";
+        document.getElementById("enter").style.visibility = "hidden";
+        document.getElementById("name").style.visibility = "hidden";
+        document.getElementById("click").style.visibility = "hidden";
+        document.getElementById("pic").style.visibility = "hidden";
+        document.getElementById("button2").style.visibility = "hidden";
+      }
+      function show()
+      {
+        document.getElementById("Intro").style.visibility = "visible";
+        document.getElementById("enter").style.visibility = "visible";
+        document.getElementById("name").style.visibility = "visible";
+        document.getElementById("click").style.visibility = "visible";
+        document.getElementById("pic").style.visibility = "visible";
+        document.getElementById("button2").style.visibility = "visible";
+      }
+      function move()
+      {
+        window.location.href = "Letter.html";
+      }
+      function saveName()
+      {
+        var x = document.getElementById("name").value
+        window.localStorage.setItem('userName', x);
+      }
+    </script>
+  </head>
+
+  <body onload = "hide()">
+    <ul id = "top">
+      <li class = "items"> Your Hogwarts School of Witchcraft and Wizardry Adventure </li> <hr>
+    </ul>
+    <ul id = "side">
+    <li id = "sideBar"><a href = "TextAdventure.html"> Home </a></li>
+    <li id = "sideBar"><a href = "Spells.html"> Spells </a></li>
+    </ul>
+    <input type = "button" onclick = "show()" value = "Begin my Adventure!" id = "button1">
+    <p id = "Intro"> It's summer and you've just woken up to a light tapping on your window. You walk over, wondering <br>
+     what bloody pigeon had woken you up at this ungodly hour, and find a large snowy owl with an envelope tied around its foot. </p>
+    <p id = "enter"> Please Enter Your Name </p>
+    <input type = "text" id = "name">
+    <input type = "button" value = "OK" onclick = "saveName()" id = "button2">
+    <p id = "click"> Click on the owl to take the envelope.</p>
+    <p id = "pic">
+    <img src = "owl.jpg" width = "500px" height = "500px" onclick = "move()"> </p>
+  </body>
+</html>

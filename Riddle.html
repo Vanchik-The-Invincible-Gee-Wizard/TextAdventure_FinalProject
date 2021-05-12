@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href = "textStyle.css">
+    <style>
+      #italics{
+        font-style: italic;
+      }
+      #question{
+        text-align: center;
+      }
+    </style>
+    <script>
+      function hide()
+      {
+        document.getElementById('name').style.visibility = "hidden";
+        document.getElementById('button1').style.visibility = "hidden";
+        document.getElementById('button2').style.visibility = "hidden";
+      }
+      function actionOne()
+      {
+        document.getElementById("question").innerHTML = "<p>First think of the person who lives in disguise,<br>Who deals in secrets and tells naught but lies.<br>Next, tell me what’s always the last thing to mend,<br>The middle of the middle and end of the end?<br>And finally, give me the sound often heard<br>During the search for a hard-to-find word.<br>Now string them together, and answer me this,<br>Which creature would you be unwilling to kiss?<br><br>I am a...</p>";
+        document.getElementById('name').style.visibility = "visible";
+        document.getElementById('button1').style.visibility = "visible";
+        document.getElementById('button2').style.visibility = "visible";
+      }
+      function checkAnswer()
+      {
+        var x = document.getElementById('name').value;
+        if (x == "spider")
+        {
+          document.getElementById('name').style.visibility = "hidden";
+          document.getElementById('question').style.visibility = "hidden";
+          document.getElementById('button1').style.visibility = "hidden";
+          document.getElementById("pic").innerHTML = "<p> That is correct! Great job! The painting glares at you and swings open, letting all the students pour into the dorm. <br> Then you realize that you cat, who has been sitting on your shoulder up till now, is missing. <br> You see the tip of her tail disappearing behind a nearby corridor and before you know it, you are rushing after her. <br> You creep down the stairs, past the Great Hall, and find yourself at the the slightly ajar giant oak doors of the main entrance.</p>";
+        }
+        else if (x == "Spider")
+        {
+          document.getElementById('name').style.visibility = "hidden";
+          document.getElementById('question').style.visibility = "hidden";
+          document.getElementById('button1').style.visibility = "hidden";
+          document.getElementById("pic").innerHTML = "<p> That is correct! Great job! The painting glares at you and swings open, letting all the students pour into the dorm. <br> Then you realize that you cat, who has been sitting on your shoulder up till now, is missing. <br> You see the tip of her tail disappearing behind a nearby corridor and before you know it, you are rushing after her. <br> You creep down the stairs, past the Great Hall, and find yourself at the the slightly ajar giant oak doors of the main entrance. You burst through the doors. </p>";
+        }
+        else
+        {
+          document.getElementById("answer").innerHTML = "That is incorrect. The lady in the painting cackles and disappears, leaving you to wait for the prefects to show up. <br> As you wait, you realize that your cat, who had been sitting on your shoulder up till now, is missing.<br> You look around and see the tip of her tail disappearing behind a nearby corner. Since you're stuck out here anyway, you decide to follow her. <br> You follow her down the stairs, past the Great Hall, and find yourself at the slightly ajar giant oak doors of the main entrance. You burst through the doors. ";
+        }
+      }
+      function next()
+      {
+        window.location.href = "ForbiddenForest.html";
+      }
+    </script>
+  </head>
+    <body onload = "hide()">
+      <ul id = "top">
+        <li class = "items"> Your Hogwarts School of Witchcraft and Wizardry Adventure </li> <hr>
+      </ul>
+      <ul id = "side">
+      <li id = "sideBar"><a href = "TextAdventure.html"> Home </a></li>
+      <li id = "sideBar"><a href = "Spells.html"> Spells </a></li>
+      </ul>
+      <h1> Your Dorm Awaits. </h1>
+      <p> You follow the other first years to your dorms, where you are met with a grumpy painting. The crowd stops moving and you work your way <br>
+      to the front to see what the holdup is. The painting refuses to let anyone inside the dorms until they answer a riddle. You step forward and <br>
+      offer to solve the riddle. </p>
+      <p id = "italics"> Click on the painting to see the riddle </p>
+      <p id = "pic">
+      <img src = "painting.jpg" width = "30%" height = "70%" onclick = "actionOne()">
+      </p>
+      <p id = "question"></p>
+      <input type = "text" id = "name">
+      <input type = "button" id = "button1" onclick = "checkAnswer()" value = "GO">
+      <p id = "answer"> </p>
+      <input type = "button" value = "NEXT" onclick = "next()" id = "button2">
+    </body>
+</html>

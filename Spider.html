@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+      <link rel = "stylesheet" href = "textStyle.css">
+      <style>
+        #italics{
+          font-style: italic;
+        }
+        p{
+          font-size: 20px;
+          font-family: New Tegomin;
+        }
+
+      </style>
+    <script>
+    function hide()
+    {
+      document.getElementById('button2').style.visibility = "hidden";
+    }
+    function checkAnswer()
+    {
+      var x = document.getElementById("name").value;
+      if (x == "Arania Exumai")
+      {
+        document.getElementById("answer").innerHTML = "Great job! You cast the correct spell and defeated the acromantula. You look forward and see your cat patiently waiting for you to follow it once again.";
+        document.getElementById('button2').style.visibility = "visible";
+      }
+      else if (x == "arania exumai")
+      {
+        document.getElementById("answer").innerHTML = "Great job! You cast the correct spell and defeated the acromantula. You look forward and see your cat patiently waiting for you to follow it once again.";
+        document.getElementById('button2').style.visibility = "visible";
+      }
+      else
+      {
+        window.location.href = "YouDied.html";
+      }
+    }
+    function next()
+    {
+      window.location.href = "Dementor.html";
+    }
+    </script>
+  </head>
+
+    <body onload = "hide()">
+      <ul id = "top">
+        <li class = "items"> Your Hogwarts School of Witchcraft and Wizardry Adventure </li> <hr>
+      </ul>
+      <ul id = "side">
+      <li id = "sideBar"><a href = "TextAdventure.html"> Home </a></li>
+      <li id = "sideBar"><a href = "Spells.html"> Spells </a></li>
+      </ul>
+      <h1> You chose to Enter the Forest. </h1>
+      <p> Your cat, who can apparently talk, once again turns away and runs into the forest. You run after it, casting lumos maxima to light up your wand. </p>
+      <p> It occurs to you that your cat must be an animagus; a human who can transform into an animal. After all, they were able to apparate and speak. </p>
+      <p> Seeing a dark shape descending in front of you, you skid to a stop. An acromantula lands in front of you, and you whisk out your wand.</p>
+      <p> Which spell do you cast? </p>
+      <p = "italics"> Click on "Spells" in the sidebar to access the Spellbook </p>
+      <input type = "text" id = "name" value = "Type in Spell">
+      <input type = "button" id = "button1" onclick = "checkAnswer()" value = "GO">
+      <p id = "answer"> </p>
+      <input type = "button" id = "button2" value = "Next" onclick = "next()">
+    </body>
+</html>

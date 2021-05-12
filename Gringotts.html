@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+      <link rel = "stylesheet" href = "textStyle.css">
+      <style>
+      #result{
+        text-align: center;
+      }
+      </style>
+    <script>
+      function convert()
+      {
+        var x = document.getElementById("money").value;
+        x = parseInt(x);
+        var gal = 0;
+        var sickles = 0;
+        var knuts = 0;
+        var string = "atm --- kPA <br> <hr>";
+        for(var i = 1; i <= x; i++)
+        {
+          gal = i*6.95;
+          sickles = gal*17;
+          knuts = sickles*29;
+          string = string + i + " dollars  --- " + gal + " galleons --- " + sickles + " sickles --- " + knuts + " knuts --- <br><hr>";
+        }
+        document.getElementById("result").innerHTML = string;
+      }
+      function move()
+      {
+        window.location.href = "SortingHat.html";
+      }
+    </script>
+  </head>
+
+    <body>
+      <ul id = "top">
+        <li class = "items"> Your Hogwarts School of Witchcraft and Wizardry Adventure </li> <hr>
+      </ul>
+      <ul id = "side">
+      <li id = "sideBar"><a href = "TextAdventure.html"> Home </a></li>
+      <li id = "sideBar"><a href = "Spells.html"> Spells </a>
+      </ul>
+      <p> Having recieved your letter, you decide to go to Diagon Alley to shop for supplies.<br>
+        After some deep contemplation, you decide to adopt a mysterious green-eyed black cat; <br>
+        after all, you need to be fully prepared if you're going to attend Hogwarts this fall. <br>
+        And nothing screams prepared more than having having a black cat sidekick. <br>
+        You enter Gringotts, the Wizarding Bank, to exchange currency to make your purchases. </p>
+        <h1> Welcome to Gringotts</h1>
+        <p> You walk up to a goblin sitting at a desk and ask to exchange currency. Enter the amount of dollars you have. </p>
+        <input type = "text" id = "money">
+        <input type = "button" id = "button1" value = "Convert" onclick = "convert()">
+        <p id = "result"></p>
+        <input type = "button" id = "button2" value = "Done" onclick = "move()">
+    </body>
+</html>

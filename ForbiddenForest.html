@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+      <link rel = "stylesheet" href = "textStyle.css">
+    <script>
+    function hide()
+    {
+      document.getElementById('name').style.visibility = "hidden";
+      document.getElementById('button1').style.visibility = "hidden";
+      document.getElementById('button2').style.visibility = "hidden";
+    }
+    function hide()
+    {
+      document.getElementById('button2').style.visibility = "hidden";
+      document.getElementById('button3').style.visibility = "hidden";
+      document.getElementById('message').style.visibility = "hidden";
+    }
+    function Spider()
+    {
+      window.location.href = "Spider.html";
+    }
+    function GoHome()
+    {
+      window.location.href = "GoHome.html";
+    }
+    function getName()
+    {
+      var x = window.localStorage.getItem('userName');
+      document.getElementById("name").innerHTML = x;
+      document.getElementById("message").style.visibility = "visible";
+      document.getElementById("button2").style.visibility = "visible";
+      document.getElementById("button3").style.visibility = "visible";
+    }
+    </script>
+  </head>
+
+    <body onload = "hide()">
+      <ul id = "top">
+        <li class = "items"> Your Hogwarts School of Witchcraft and Wizardry Adventure </li> <hr>
+      </ul>
+      <ul id = "side">
+      <li id = "sideBar"><a href = "TextAdventure.html"> Home </a></li>
+      <li id = "sideBar"><a href = "Spells.html"> Spells </a></li>
+      </ul>
+      <h1> The Doors Loom Before You</h1>
+      <p> Just as you are about to turn back and grieve the loss of the cat you've had for exactly one week, because you are not dumb enough to go venture into the grounds on your very first day at Hogwarts thank you very much, the cat darts back inside and pounces on you. </p>
+      <p> Before you can register what is happening, you are apparated and are on your back, staring at the dark sky right at the edge of the Forbidden Forest, you cat sitting innocently next to you. </p>
+      <p> As you stare at its glowing green eyes, its mouth opens and a sound echoes through the night:</p>
+      <input type = "button" id = "button1" value = "Click to Hear Message" onclick = "getName()">
+      <p id = "name"></p>
+      <p id = "message">Enter the Forest.</p>
+      <input type = "button" id = "button2" value = "Enter Forest" onclick = "Spider()">
+      <input type = "button" id = "button3" value = "Go Back Inside" onclick = "GoHome()">
+    </body>
+</html>
